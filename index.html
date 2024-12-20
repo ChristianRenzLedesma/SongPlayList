@@ -36,12 +36,12 @@
         }
 
         img {
-            width: 100%; 
-            height: 200px; 
-            object-fit: cover; 
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
             border-radius: 10px;
-            display: block; 
-            margin-bottom: 20px; 
+            display: block;
+            margin-bottom: 20px;
         }
 
 
@@ -59,25 +59,29 @@
 
         h1 {
             text-align: center;
-            top: 110px;
+            top: 40px;
             position: relative;
         }
 
         .controls {
             display: flex;
             align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
-        .play, .next, .prev {
+        .play,
+        .next,
+        .prev {
             cursor: pointer;
             border-radius: 50%;
             background-color: black;
             width: 60px;
             height: 60px;
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            margin: 0 10px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 5px;
         }
 
         .circle-play {
@@ -87,7 +91,9 @@
             height: 30px;
         }
 
-        .play:hover, .next:hover, .prev:hover {
+        .play:hover,
+        .next:hover,
+        .prev:hover {
             background: #333;
         }
 
@@ -102,19 +108,56 @@
 
         .pause-bar {
             background: #b3b3b3;
-            width: 8px; 
+            width: 8px;
             height: 30px;
         }
 
-        .circle-next, .circle-prev {
+        .circle-next,
+        .circle-prev {
             width: 20px;
-            height: 20px; 
-            background: #b3b3b3; 
+            height: 20px;
+            background: #b3b3b3;
             clip-path: polygon(0 0, 100% 50%, 0 100%);
         }
 
         .prev .circle-prev {
-            clip-path: polygon(100% 0, 0 50%, 100% 100%); 
+            clip-path: polygon(100% 0, 0 50%, 100% 100%);
+        }
+
+        .renz{
+            text-align: center;
+            margin-top: -100px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+
+            .play,
+            .next,
+            .prev {
+                width: 50px;
+                height: 50px;
+            }
+
+            .controls {
+                .controls div {
+                    margin: 5px 0;
+                }
+            }
+
+            .renz{
+                margin-top: -30px;
+            }
         }
     </style>
 </head>
@@ -144,8 +187,8 @@
         </div>
         <audio id="audio" src="path/to/your/audio1.mp3"></audio>
     </div>
-    
-    <h2 style="text-align: center; margin-top: -100px;">Created By: <b>Christian Renz Ledesma</b></h2>
+
+    <h2 class="renz">Created By: <b>Christian Renz Ledesma</b></h2>
 
     <script>
         const playButton = document.getElementById('playButton');
